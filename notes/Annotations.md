@@ -4,7 +4,8 @@
 ## 프로젝트에서 사용한 어노테이션 
 
 ### Event 도메인 class
-> Event.class  
+> Event.class    
+
 - @Builder
 - @AllArgsConstructor
 - @NoArgsConstructor
@@ -23,5 +24,17 @@
 > 위에 EqualsAndHashCode에 id만 넣어서 구현한것과 같은 이유로  
 > 스택 오버플로우가 발생 여지가 있기때문에 알고 잘 쓰는 것이 중요하다.
 
+### Event Controller
 
-                                      
+> EventControllerTest.class
+ 
+- @WebMvcTest
+- @Autowired
+- @Test
+
+> EventController.class  
+ 
+- @Controller
+- @RequestMapping(value = "/api/events", produces = MediaTypes.HAL_JSON_VALUE)
+- @PostMapping
+- @PostMapping("/api/events"")
