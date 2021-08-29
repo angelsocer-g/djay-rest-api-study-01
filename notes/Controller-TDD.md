@@ -4,6 +4,16 @@
 ## Controller
 
 ## 개요
+> TDD 라기보단 Testcode 의미로 정리
+
+### common
+- hateoas 패키지를 잘 봐야 좋은 REST API를 만들 수 있을듯
+  - URI정보 e.g 
+    - methodOn - Method 기준 
+      - URI createdUri = linkTo(methodOn(EventController.class).createEvent(null)).slash("{id}").toUri();
+    - mapping - URI 기준
+      - URI createdUri = linkTo(EventController.class).slash("{id}").toUri();
+      - URI createdUri = linkTo(EventController.class).slash(newEvent.getId()).toUri();
 
 ### post
 1. test class 생성

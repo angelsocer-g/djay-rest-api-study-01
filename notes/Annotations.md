@@ -18,6 +18,11 @@
   - 객체간에 연관관계가 있을때 "상호 참조 관계"가 되버리면 스택 오버플로우가 발생할 수 있음
   - 위와같은 이유로 백기선님은 객체참조가 없는 필드, 보통 id 필드만 참조해서 사용한다고 함
   - 필요하다면 다른필드를 더 추가해서 사용해도 되지만 "참조관계가 있는 필드"는 사용하면안됨
+- @Entity
+- @Id
+- @GeneratedValue
+- @Enumerated(EnumType.STRING)
+  - 그냥 선언할 경우 기본값이 ORDINAL 이기때문에 순서safe하게 String으로
 
 > @Data 어노테이션 주의사항  
 > @Data도 Equlas, HashCode 를 구현해주는데 "상호참조관계"가 있는 객체가 있을경우   
@@ -36,5 +41,6 @@
  
 - @Controller
 - @RequestMapping(value = "/api/events", produces = MediaTypes.HAL_JSON_VALUE)
+  - MediaTypes.HAL_JSON_VALUE = "application/hal+json"
 - @PostMapping
-- @PostMapping("/api/events"")
+  - @PostMapping("/api/events"")
